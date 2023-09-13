@@ -23,5 +23,11 @@ namespace AppAvaliacaoAtividade1
             FormComissao form = new FormComissao();
             form.ShowDialog();
         }
+
+        private void btMeta_Click(object sender, EventArgs e)
+        {
+            FormMeta form = new FormMeta();
+            form.ShowDialog();
+        }
     }
 }

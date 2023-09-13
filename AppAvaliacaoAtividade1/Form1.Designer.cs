@@ -75,6 +75,7 @@
             this.btMeta.TabIndex = 4;
             this.btMeta.Text = "Meta";
             this.btMeta.UseVisualStyleBackColor = true;
+            this.btMeta.Click += new System.EventHandler(this.btMeta_Click);
             // 
             // btSalario
             // 
