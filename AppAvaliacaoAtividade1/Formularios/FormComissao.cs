@@ -16,5 +16,15 @@ namespace AppAvaliacaoAtividade1.Formularios
         {
             InitializeComponent();
         }
+
+        private void FormComissao_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btCancelar_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

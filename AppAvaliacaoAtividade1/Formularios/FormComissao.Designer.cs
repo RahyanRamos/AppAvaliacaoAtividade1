@@ -191,6 +191,7 @@
             this.btCancelar.TabIndex = 14;
             this.btCancelar.Text = "Cancelar";
             this.btCancelar.UseVisualStyleBackColor = false;
+            this.btCancelar.Click += new System.EventHandler(this.btCancelar_Click);
             // 
             // FormComissao
             // 
@@ -214,6 +215,7 @@
             this.Controls.Add(this.cbCargo);
             this.Name = "FormComissao";
             this.Text = "FormComissao";
+            this.Load += new System.EventHandler(this.FormComissao_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
