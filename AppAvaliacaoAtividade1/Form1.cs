@@ -20,13 +20,7 @@ namespace AppAvaliacaoAtividade1
 
         private void btComissao_Click(object sender, EventArgs e)
         {
-            FormComissao form = new FormComissao();
-            form.ShowDialog();
-        }
-
-        private void btMeta_Click(object sender, EventArgs e)
-        {
-            FormMeta form = new FormMeta();
+            FormCalculo form = new FormCalculo();
             form.ShowDialog();
         }
     }

@@ -1,6 +1,6 @@
 ﻿namespace AppAvaliacaoAtividade1.Formularios
 {
-    partial class FormComissao
+    partial class FormCalculo
     {
         /// <summary>
         /// Required designer variable.
@@ -31,18 +31,24 @@
             this.cbCargo = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.lbVenda = new System.Windows.Forms.Label();
             this.tbVenda = new System.Windows.Forms.TextBox();
             this.tbSalario = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
+            this.lbSalario = new System.Windows.Forms.Label();
             this.tbConcessionaria = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
+            this.lbConcessionaria = new System.Windows.Forms.Label();
             this.tbMetaFunc = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
+            this.lbMetaFunc = new System.Windows.Forms.Label();
             this.tbMetaConc = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
+            this.lbMetaConc = new System.Windows.Forms.Label();
             this.btCalcular = new System.Windows.Forms.Button();
             this.btCancelar = new System.Windows.Forms.Button();
+            this.tbComissao = new System.Windows.Forms.TextBox();
+            this.lbComissao = new System.Windows.Forms.Label();
+            this.tbPorcentagem = new System.Windows.Forms.TextBox();
+            this.lbPorcentagem = new System.Windows.Forms.Label();
+            this.tbSalarioFinal = new System.Windows.Forms.TextBox();
+            this.lbSalarioFinal = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // cbCargo
@@ -59,16 +65,17 @@
             this.cbCargo.Name = "cbCargo";
             this.cbCargo.Size = new System.Drawing.Size(340, 28);
             this.cbCargo.TabIndex = 0;
+            this.cbCargo.SelectedIndexChanged += new System.EventHandler(this.cbCargo_SelectedIndexChanged);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(242, 9);
+            this.label1.Location = new System.Drawing.Point(249, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(304, 37);
+            this.label1.Size = new System.Drawing.Size(269, 37);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Calcular Comissão";
+            this.label1.Text = "Calcular Valores";
             // 
             // label2
             // 
@@ -80,15 +87,15 @@
             this.label2.TabIndex = 2;
             this.label2.Text = "Cargo do funcionário";
             // 
-            // label3
+            // lbVenda
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(12, 171);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(147, 20);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "Valor das vendas";
+            this.lbVenda.AutoSize = true;
+            this.lbVenda.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbVenda.Location = new System.Drawing.Point(12, 171);
+            this.lbVenda.Name = "lbVenda";
+            this.lbVenda.Size = new System.Drawing.Size(147, 20);
+            this.lbVenda.TabIndex = 3;
+            this.lbVenda.Text = "Valor das vendas";
             // 
             // tbVenda
             // 
@@ -106,15 +113,15 @@
             this.tbSalario.Size = new System.Drawing.Size(340, 26);
             this.tbSalario.TabIndex = 6;
             // 
-            // label4
+            // lbSalario
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(12, 250);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(65, 20);
-            this.label4.TabIndex = 5;
-            this.label4.Text = "Salário";
+            this.lbSalario.AutoSize = true;
+            this.lbSalario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbSalario.Location = new System.Drawing.Point(12, 250);
+            this.lbSalario.Name = "lbSalario";
+            this.lbSalario.Size = new System.Drawing.Size(65, 20);
+            this.lbSalario.TabIndex = 5;
+            this.lbSalario.Text = "Salário";
             // 
             // tbConcessionaria
             // 
@@ -124,15 +131,15 @@
             this.tbConcessionaria.Size = new System.Drawing.Size(340, 26);
             this.tbConcessionaria.TabIndex = 8;
             // 
-            // label5
+            // lbConcessionaria
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(12, 339);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(220, 20);
-            this.label5.TabIndex = 7;
-            this.label5.Text = "Vendas da concessionária";
+            this.lbConcessionaria.AutoSize = true;
+            this.lbConcessionaria.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbConcessionaria.Location = new System.Drawing.Point(12, 339);
+            this.lbConcessionaria.Name = "lbConcessionaria";
+            this.lbConcessionaria.Size = new System.Drawing.Size(220, 20);
+            this.lbConcessionaria.TabIndex = 7;
+            this.lbConcessionaria.Text = "Vendas da concessionária";
             // 
             // tbMetaFunc
             // 
@@ -142,15 +149,15 @@
             this.tbMetaFunc.Size = new System.Drawing.Size(340, 26);
             this.tbMetaFunc.TabIndex = 10;
             // 
-            // label6
+            // lbMetaFunc
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(448, 96);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(168, 20);
-            this.label6.TabIndex = 9;
-            this.label6.Text = "Meta do funcionário";
+            this.lbMetaFunc.AutoSize = true;
+            this.lbMetaFunc.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbMetaFunc.Location = new System.Drawing.Point(448, 96);
+            this.lbMetaFunc.Name = "lbMetaFunc";
+            this.lbMetaFunc.Size = new System.Drawing.Size(168, 20);
+            this.lbMetaFunc.TabIndex = 9;
+            this.lbMetaFunc.Text = "Meta do funcionário";
             // 
             // tbMetaConc
             // 
@@ -160,15 +167,15 @@
             this.tbMetaConc.Size = new System.Drawing.Size(340, 26);
             this.tbMetaConc.TabIndex = 12;
             // 
-            // label7
+            // lbMetaConc
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(448, 171);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(199, 20);
-            this.label7.TabIndex = 11;
-            this.label7.Text = "Meta da concessionária";
+            this.lbMetaConc.AutoSize = true;
+            this.lbMetaConc.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbMetaConc.Location = new System.Drawing.Point(448, 171);
+            this.lbMetaConc.Name = "lbMetaConc";
+            this.lbMetaConc.Size = new System.Drawing.Size(199, 20);
+            this.lbMetaConc.TabIndex = 11;
+            this.lbMetaConc.Text = "Meta da concessionária";
             // 
             // btCalcular
             // 
@@ -180,6 +187,7 @@
             this.btCalcular.TabIndex = 13;
             this.btCalcular.Text = "Calcular";
             this.btCalcular.UseVisualStyleBackColor = false;
+            this.btCalcular.Click += new System.EventHandler(this.btCalcular_Click);
             // 
             // btCancelar
             // 
@@ -193,29 +201,91 @@
             this.btCancelar.UseVisualStyleBackColor = false;
             this.btCancelar.Click += new System.EventHandler(this.btCancelar_Click);
             // 
-            // FormComissao
+            // tbComissao
+            // 
+            this.tbComissao.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbComissao.Location = new System.Drawing.Point(435, 333);
+            this.tbComissao.Name = "tbComissao";
+            this.tbComissao.ReadOnly = true;
+            this.tbComissao.Size = new System.Drawing.Size(97, 26);
+            this.tbComissao.TabIndex = 16;
+            // 
+            // lbComissao
+            // 
+            this.lbComissao.AutoSize = true;
+            this.lbComissao.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbComissao.Location = new System.Drawing.Point(435, 310);
+            this.lbComissao.Name = "lbComissao";
+            this.lbComissao.Size = new System.Drawing.Size(87, 20);
+            this.lbComissao.TabIndex = 15;
+            this.lbComissao.Text = "Comissão";
+            // 
+            // tbPorcentagem
+            // 
+            this.tbPorcentagem.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbPorcentagem.Location = new System.Drawing.Point(553, 333);
+            this.tbPorcentagem.Name = "tbPorcentagem";
+            this.tbPorcentagem.ReadOnly = true;
+            this.tbPorcentagem.Size = new System.Drawing.Size(97, 26);
+            this.tbPorcentagem.TabIndex = 18;
+            // 
+            // lbPorcentagem
+            // 
+            this.lbPorcentagem.AutoSize = true;
+            this.lbPorcentagem.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbPorcentagem.Location = new System.Drawing.Point(553, 310);
+            this.lbPorcentagem.Name = "lbPorcentagem";
+            this.lbPorcentagem.Size = new System.Drawing.Size(94, 20);
+            this.lbPorcentagem.TabIndex = 17;
+            this.lbPorcentagem.Text = "% da Meta";
+            // 
+            // tbSalarioFinal
+            // 
+            this.tbSalarioFinal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbSalarioFinal.Location = new System.Drawing.Point(669, 333);
+            this.tbSalarioFinal.Name = "tbSalarioFinal";
+            this.tbSalarioFinal.ReadOnly = true;
+            this.tbSalarioFinal.Size = new System.Drawing.Size(97, 26);
+            this.tbSalarioFinal.TabIndex = 20;
+            // 
+            // lbSalarioFinal
+            // 
+            this.lbSalarioFinal.AutoSize = true;
+            this.lbSalarioFinal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbSalarioFinal.Location = new System.Drawing.Point(669, 310);
+            this.lbSalarioFinal.Name = "lbSalarioFinal";
+            this.lbSalarioFinal.Size = new System.Drawing.Size(109, 20);
+            this.lbSalarioFinal.TabIndex = 19;
+            this.lbSalarioFinal.Text = "Salário Final";
+            // 
+            // FormCalculo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.tbSalarioFinal);
+            this.Controls.Add(this.lbSalarioFinal);
+            this.Controls.Add(this.tbPorcentagem);
+            this.Controls.Add(this.lbPorcentagem);
+            this.Controls.Add(this.tbComissao);
+            this.Controls.Add(this.lbComissao);
             this.Controls.Add(this.btCancelar);
             this.Controls.Add(this.btCalcular);
             this.Controls.Add(this.tbMetaConc);
-            this.Controls.Add(this.label7);
+            this.Controls.Add(this.lbMetaConc);
             this.Controls.Add(this.tbMetaFunc);
-            this.Controls.Add(this.label6);
+            this.Controls.Add(this.lbMetaFunc);
             this.Controls.Add(this.tbConcessionaria);
-            this.Controls.Add(this.label5);
+            this.Controls.Add(this.lbConcessionaria);
             this.Controls.Add(this.tbSalario);
-            this.Controls.Add(this.label4);
+            this.Controls.Add(this.lbSalario);
             this.Controls.Add(this.tbVenda);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.lbVenda);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.cbCargo);
-            this.Name = "FormComissao";
+            this.Name = "FormCalculo";
             this.Text = "FormComissao";
-            this.Load += new System.EventHandler(this.FormComissao_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -226,17 +296,23 @@
         private System.Windows.Forms.ComboBox cbCargo;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lbVenda;
         private System.Windows.Forms.TextBox tbVenda;
         private System.Windows.Forms.TextBox tbSalario;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lbSalario;
         private System.Windows.Forms.TextBox tbConcessionaria;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label lbConcessionaria;
         private System.Windows.Forms.TextBox tbMetaFunc;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label lbMetaFunc;
         private System.Windows.Forms.TextBox tbMetaConc;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label lbMetaConc;
         private System.Windows.Forms.Button btCalcular;
         private System.Windows.Forms.Button btCancelar;
+        private System.Windows.Forms.TextBox tbComissao;
+        private System.Windows.Forms.Label lbComissao;
+        private System.Windows.Forms.TextBox tbPorcentagem;
+        private System.Windows.Forms.Label lbPorcentagem;
+        private System.Windows.Forms.TextBox tbSalarioFinal;
+        private System.Windows.Forms.Label lbSalarioFinal;
     }
 }
